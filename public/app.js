@@ -8,8 +8,7 @@ var app = function(){
 var handleButtonClick = function() {
     var inputBox = document.querySelector('input');
     var search = inputBox.value
-    var url = 'http://www.omdbapi.com/?s=' + search + '&page=2';
-
+    var url = 'http://www.omdbapi.com/?s=' + search + '&page=1';
     makeRequest(url,requestComplete);
   }
 
@@ -46,6 +45,12 @@ var populateList = function(movies){
     var li = document.createElement('li');
     li.innerText = movie.Title;
     div.appendChild(li);
+
+    // movie year-------------------------------
+    var li = document.createElement('li');
+    li.innerText = movie.Year;
+    div.appendChild(li);
+
 
     // movie image-------------------------------
     var movieImage = document.createElement('img');

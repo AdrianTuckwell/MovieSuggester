@@ -1,5 +1,5 @@
 main{
-  width: 300px;
+  width: 500px;
   margin: 0 auto;
 }
 
@@ -9,6 +9,17 @@ input{
   width: 400px;
   font-size: 22px;
   margin: 10px;
+}
+
+h3{
+  font-size: 22px;
+  font-family: "Twiddlestix";
+}
+
+li {
+
+  font-family: "Twiddlestix";
+  list-style-type: none;
 }
 
 .album{
