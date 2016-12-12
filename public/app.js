@@ -2,7 +2,6 @@ var app = function(){
   //listen for search button to be clicked
   var button = document.querySelector('button');
   button.onclick = handleButtonClick;
-
 }  
 
 var handleButtonClick = function() {
@@ -21,10 +20,6 @@ var makeRequest = function(url, callback){
   request.onload = callback;
   //send the request!
   request.send();
-}
-
-var requestComplete = function(){
-  console.log("Whoot!");
 }
 
 var requestComplete = function(){
@@ -51,6 +46,16 @@ var populateList = function(movies){
     li.innerText = movie.Year;
     div.appendChild(li);
 
+    // movie tag-------------------------------
+    var li = document.createElement('li');
+    li.innerText = movie.imdbID;
+    div.appendChild(li);
+
+    // movie link-------------------------------
+    var movieLink = document.createElement('a');
+    movieLink.innerText = "link";
+    // movieLink.href = album.external_urls.spotify;
+    div.appendChild(movieLink);
 
     // movie image-------------------------------
     var movieImage = document.createElement('img');
